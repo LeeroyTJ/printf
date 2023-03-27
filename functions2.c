@@ -44,27 +44,3 @@ int _print_int(va_list ap)
 
 }
 
-int _printf(const char *format, ...)
-{
-	int printed_char;
-	convert_t format_list[] = {
-		{"c", _printchar},
-		{"s", _printstr},
-		{"%", _printpercent},
-		{"d", _print_int},
-		{"i", _print_int}
-	}::
-
-	va_list ap;
-
-	if (format == NULL)
-		retutn (-1);
-
-	va_start(ap, format);
-
-	printed_char = execute(format, format_list, ap);
-
-	va_end(ap);
-	return (printed_char);
-}
-

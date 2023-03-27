@@ -12,7 +12,9 @@ int _printf(const char *format, ...)
 	convert_t format_list[] = {
 		{"c", _printchar},
 		{"s", _printstr},
-		{"%", _printpercent}
+		{"%", _printpercent},
+		{"d", _print_int},
+		{"i", _print_int}
 	};
 
 	va_list ap;
