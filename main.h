@@ -19,5 +19,11 @@ int _printchar(va_list);
 int _printpercent(va_list);
 int _printstr(va_list);
 int execute(const char *format, convert_t format_list[], va_list ap);
+int _print_int(va_list);
+int print_binary(va_list);
+char *rev_string(char *s);
+void write_base(char *s);
+unsigned int base_len(unsigned int num, int base);
+char *_memcpy(char *dest, char *src, unsigned int n);
 
 #endif
