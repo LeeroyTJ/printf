@@ -148,35 +148,35 @@ int print_hex(va_list ap)
 	int rm_num
 	char *rev_str;
 
-        num = va_arg(list, unsigned int);
+	num = va_arg(list, unsigned int);
 
-        if (num == 0)
-        return (_write_char('0'));
-        if (num < 1)
-        return (-1);
+	if (num == 0)
+	return (_write_char('0'));
+	if (num < 1)
+	return (-1);
 
-        len = base_len(num, 16);
+	len = base_len(num, 16);
 
-        hex_rep = malloc(sizeof(char) * (len + 1));
-        if (hex_rep == NULL)
-                return (-1);
+	hex_rep = malloc(sizeof(char) * (len + 1));
+	if (hex_rep == NULL)
+		return (-1);
 
-        for (len = 0; num > 0; len++)
-		{
-        rm_num = hex_check(rm_num, 'X';
-                hex_rep[len] = rm_num;
-        }
-        else
-                hex_rep[len] = rm_num + 48;
-                num = num / 16;
-        }
-        hex_rep[len] = '\0';
-        rev_hex = rev_string(hex_rep);
-        if (rev_hex == NULL)
-        return (-1);
+	for (len = 0; num > 0; len++)
+	{
+	rm_num = hex_check(rm_num, 'X';
+	hex_rep[len] = rm_num;
+	}
+	else
+	hex_rep[len] = rm_num + 48;
+		num = num / 16;
+	}
+	hex_rep[len] = '\0';
+	rev_hex = rev_string(hex_rep);
+	if (rev_hex == NULL)
+	return (-1);
 
-        write_base(rev_hex);
-        free(hex_rep);
-        free(rev_hex);
-        return (len);
+	write_base(rev_hex);
+	free(hex_rep);
+	free(rev_hex);
+	return (len);
 }
