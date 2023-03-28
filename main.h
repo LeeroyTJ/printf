@@ -19,5 +19,7 @@ int _printchar(va_list);
 int _printpercent(va_list);
 int _printstr(va_list);
 int execute(const char *format, convert_t format_list[], va_list ap);
+int _print_int(va_list);
+int _print_unsigned_int(va_list);
 
 #endif
