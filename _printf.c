@@ -14,7 +14,8 @@ int _printf(const char *format, ...)
 		{"s", _printstr},
 		{"%", _printpercent},
 		{"d", _print_int},
-		{"i", _print_int}
+		{"i", _print_int},
+		{"u", _print_unsigned_int}
 	};
 
 	va_list ap;
