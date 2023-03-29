@@ -15,7 +15,14 @@ int _printf(const char *format, ...)
 		{"%", _printpercent},
 		{"d", _print_int},
 		{"i", _print_int},
-		{"u", _print_unsigned_int}
+		{"u", _print_unsigned_int},
+		{"o", print_octal},
+		{"x", print_hex},
+		{"X", print_heX},
+		{"p", _print_addr},
+		{"b", print_binary},
+		{"r", print_rev},
+		{"R", rot13}
 	};
 
 	va_list ap;
